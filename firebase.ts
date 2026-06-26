@@ -1,19 +1,25 @@
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyDYiwHhAs18MUsAV6CZ5_vxqQoabQXvmhM",
-    authDomain: "jazirah-fbac6.firebaseapp.com",
-    projectId: "jazirah-fbac6",
-    storageBucket: "jazirah-fbac6.firebasestorage.app",
-    messagingSenderId: "1082545229755",
-    appId: "1:1082545229755:web:5e2aefd15ba71e00e5be9e"
-  };
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-</script>
+// تنظیمات Firebase (همین‌ها را از Firebase Console داری)
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+
+// ساخت اپ Firebase
+const app = initializeApp(firebaseConfig);
+
+// سرویس‌ها
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+export const storage = getStorage(app);
+
+export default app;
