@@ -1,0 +1,9 @@
+{
+  "name": "Jazirah Chat & Call",
+  "description": "A high-fidelity imo/Telegram style calling and chatting application with Persian and English support, full video/voice calls, channels, and groups.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
